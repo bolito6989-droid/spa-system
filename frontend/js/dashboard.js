@@ -1,24 +1,21 @@
-const savedTheme = localStorage.getItem("theme") || "light";
-document.documentElement.setAttribute("data-theme", savedTheme);
+const API="http://localhost:4000/api"
 
-const themeSwitch = document.getElementById("themeSwitch");
-themeSwitch.checked = savedTheme === "dark";
+async function loadDashboard(){
 
-themeSwitch.addEventListener("change", () => {
-  const t = themeSwitch.checked ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", t);
-  localStorage.setItem("theme", t);
-});
+try{
 
-document.getElementById("currentDate").textContent =
-  new Date().toLocaleDateString("es-EC", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+const res=await fetch(API+"/clients")
 
-document.getElementById("logoutBtn").onclick = () => {
-  localStorage.clear();
-  window.location.href = "login.html";
-};
+const clients=await res.json()
+
+document.getElementById("totalClients").innerText=clients.length
+
+}catch(e){
+
+console.log("API no disponible")
+
+}
+
+}
+
+loadDashboard()

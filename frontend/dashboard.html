@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Dashboard · Spa System</title>
 
-  <link rel="stylesheet" href="css/dashboard.css?v=5">
-  <link rel="stylesheet" href="css/transitions.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Spa System Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
 </head>
+
 <body>
 
-  <aside class="sidebar">
-    <h2>Spa System</h2>
-    <nav>
-      <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="appointments.html">Citas</a>
-      <a href="login.html" id="logoutBtn">Cerrar sesión</a>
-    </nav>
-  </aside>
+<div class="layout">
 
-  <main class="main">
-    <header class="top-bar">
-      <span id="currentDate"></span>
+<!-- SIDEBAR -->
 
-      <label>
-        <input type="checkbox" id="themeSwitch"> 🌙 Dark
-      </label>
-    </header>
+<aside class="sidebar">
 
-    <section class="cards">
-      <div class="card">
-        <h3>Total de citas</h3>
-        <span>0</span>
-      </div>
+<h2>Spa System</h2>
 
-      <div class="card">
-        <h3>Citas de hoy</h3>
-        <span>0</span>
-      </div>
-    </section>
+<nav>
 
-    <footer>
-      Desarrollado por <strong>Intelmatic®</strong>
-    </footer>
-  </main>
+<a href="dashboard.html" class="active">Dashboard</a>
 
-  <script src="js/dashboard.js?v=5"></script>
-  <script src="js/transitions.js"></script>
+<a href="clients.html">Clientes</a>
+
+<a href="appointments.html">Agenda</a>
+
+<a href="#">Servicios</a>
+
+<a href="#">Terapeutas</a>
+
+<a href="#">Facturación</a>
+
+<a href="#">Reportes</a>
+
+<a href="login.html" class="logout">Cerrar sesión</a>
+
+</nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<header class="topbar">
+
+<h1>Panel Administrativo</h1>
+
+<div class="user">
+
+Administrador
+
+</div>
+
+</header>
+
+
+<section class="cards">
+
+<div class="card">
+
+<h3>Clientes</h3>
+
+<p id="totalClients">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Citas Hoy</h3>
+
+<p id="todayAppointments">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Ingresos Hoy</h3>
+
+<p>$0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Servicios</h3>
+
+<p>4</p>
+
+</div>
+
+</section>
+
+
+<section class="activity">
+
+<h2>Actividad reciente</h2>
+
+<div class="activity-box">
+
+Sistema Spa funcionando correctamente
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
 </body>
+
 </html>
