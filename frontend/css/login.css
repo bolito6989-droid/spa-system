@@ -5,7 +5,7 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
-/* FONDO ORIGINAL BONITO */
+/* FONDO PRINCIPAL */
 
 body{
 
@@ -15,7 +15,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#19c6b3,#0f7f68);
+background:linear-gradient(135deg,#1cc7b7,#0f8f73);
 
 }
 
@@ -25,7 +25,7 @@ background:linear-gradient(135deg,#19c6b3,#0f7f68);
 
 width:360px;
 
-background:#243847;
+background:#1f3b4a;
 
 border-radius:18px;
 
@@ -47,7 +47,7 @@ font-size:30px;
 
 margin-bottom:6px;
 
-color:#1ce7c2;
+color:#26ffe6;
 
 }
 
@@ -57,7 +57,7 @@ color:#1ce7c2;
 
 margin-bottom:30px;
 
-opacity:0.8;
+opacity:0.85;
 
 }
 
@@ -97,9 +97,9 @@ border:none;
 
 border-radius:10px;
 
-background:linear-gradient(135deg,#21e6c1,#12bfa3);
+background:linear-gradient(135deg,#1ce7c2,#00b894);
 
-color:#073b36;
+color:#053b36;
 
 font-size:15px;
 
@@ -111,11 +111,11 @@ transition:0.2s;
 
 }
 
-/* HOVER */
+/* HOVER BOTON */
 
 button:hover{
 
-transform:scale(1.05);
+transform:scale(1.04);
 
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
@@ -147,7 +147,7 @@ color:#ff6b6b;
 
 footer{
 
-margin-top:20px;
+margin-top:22px;
 
 font-size:12px;
 
@@ -155,13 +155,14 @@ opacity:0.6;
 
 }
 
-/* FECHA Y BOTON TEMA */
+/* FECHA Y TEMA */
 
 .top-bar{
 
 position:absolute;
 
 top:20px;
+
 right:30px;
 
 display:flex;
