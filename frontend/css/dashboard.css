@@ -7,13 +7,15 @@ font-family:Segoe UI, sans-serif;
 
 body{
 
-min-height:100vh;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
 
 background:linear-gradient(135deg,#0f766e,#059669);
 
 transition:0.3s;
-
-padding:40px;
 
 }
 
@@ -23,19 +25,18 @@ background:linear-gradient(135deg,#a5f3fc,#67e8f9);
 
 }
 
-/* TOP BAR */
-
 .top-bar{
 
+position:absolute;
+top:20px;
+right:20px;
+
 display:flex;
-
-justify-content:space-between;
-
+gap:20px;
 align-items:center;
 
-margin-bottom:30px;
-
 color:white;
+font-weight:500;
 
 }
 
@@ -49,13 +50,9 @@ cursor:pointer;
 
 }
 
-/* DASHBOARD CONTAINER */
+.login-container{
 
-.dashboard{
-
-max-width:1100px;
-
-margin:auto;
+width:360px;
 
 background:rgba(0,0,0,0.4);
 
@@ -65,106 +62,67 @@ border-radius:16px;
 
 padding:40px;
 
+text-align:center;
+
 color:white;
 
 box-shadow:0 20px 50px rgba(0,0,0,0.3);
 
 }
 
-body.light .dashboard{
+body.light .login-container{
 
 background:white;
 color:#333;
 
 }
 
-/* TITULO */
-
 h1{
 
-margin-bottom:25px;
+font-size:28px;
+margin-bottom:5px;
 
 }
 
-/* STATS */
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:20px;
+.subtitle{
 
 margin-bottom:30px;
+opacity:0.8;
 
 }
 
-.card{
-
-background:#374151;
-
-padding:20px;
-
-border-radius:12px;
-
-text-align:center;
-
-}
-
-body.light .card{
-
-background:#f3f4f6;
-
-}
-
-.number{
-
-font-size:28px;
-
-margin-top:5px;
-
-color:#22d3ee;
-
-}
-
-/* TABLE */
-
-table{
+input{
 
 width:100%;
 
-border-collapse:collapse;
+padding:14px;
 
-margin-top:10px;
+margin-bottom:15px;
 
-}
+border:none;
 
-th,td{
+border-radius:10px;
 
-padding:12px;
+background:#374151;
 
-text-align:left;
+color:white;
 
-}
-
-th{
-
-opacity:0.7;
+font-size:14px;
 
 }
 
-tr{
+body.light input{
 
-border-bottom:1px solid rgba(255,255,255,0.1);
+background:#f3f4f6;
+color:#111;
 
 }
-
-/* BUTTON */
 
 button{
 
-padding:12px 14px;
+width:100%;
+
+padding:14px;
 
 border:none;
 
@@ -173,6 +131,8 @@ border-radius:10px;
 background:linear-gradient(135deg,#22d3ee,#14b8a6);
 
 color:white;
+
+font-size:15px;
 
 font-weight:600;
 
@@ -185,5 +145,33 @@ transition:0.2s;
 button:hover{
 
 transform:scale(1.03);
+
+}
+
+.demo{
+
+margin-top:10px;
+
+font-size:13px;
+
+opacity:0.7;
+
+}
+
+.error{
+
+margin-top:10px;
+
+color:#f87171;
+
+}
+
+footer{
+
+margin-top:20px;
+
+font-size:12px;
+
+opacity:0.6;
 
 }
