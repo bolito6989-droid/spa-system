@@ -4,20 +4,27 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spa System Dashboard</title>
+<title>Dashboard</title>
 
-<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
-<body class="dashboard-body">
+<body>
 
-<div class="dashboard-container">
+<div class="top-bar">
 
-<h1>Dashboard Spa System</h1>
+<h2>Spa System</h2>
+
+<button id="themeToggle">🌙</button>
+
+</div>
+
+<div class="dashboard">
+
+<h1>Dashboard</h1>
 
 <div class="stats">
 
@@ -31,7 +38,7 @@ Clientes
 
 <div class="card">
 
-Citas hoy
+Citas Hoy
 
 <div class="number" id="citasHoy">0</div>
 
@@ -55,7 +62,7 @@ Ingresos
 
 </div>
 
-<h2>Citas recientes</h2>
+<h3>Citas recientes</h3>
 
 <table>
 
@@ -64,11 +71,8 @@ Ingresos
 <tr>
 
 <th>Cliente</th>
-
 <th>Servicio</th>
-
 <th>Fecha</th>
-
 <th>Hora</th>
 
 </tr>
@@ -81,7 +85,9 @@ Ingresos
 
 </table>
 
-<button class="dashboard-btn" onclick="logout()">Cerrar sesión</button>
+<br>
+
+<button onclick="logout()">Cerrar sesión</button>
 
 </div>
 

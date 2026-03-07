@@ -1,61 +1,76 @@
-const tabla = document.getElementById("tablaCitas")
+const themeToggle=document.getElementById("themeToggle")
 
-const clientesTotal = document.getElementById("clientesTotal")
+/* TEMA */
 
-const citasHoy = document.getElementById("citasHoy")
+const savedTheme=localStorage.getItem("theme")
 
-async function cargarDashboard(){
+if(savedTheme==="light"){
 
-try{
+document.body.classList.add("light")
 
-const resClientes = await fetch("http://localhost:4000/api/clients")
-
-const clientes = await resClientes.json()
-
-clientesTotal.innerText = clientes.length
-
-
-const resCitas = await fetch("http://localhost:4000/api/appointments")
-
-const citas = await resCitas.json()
-
-tabla.innerHTML=""
-
-let hoy = new Date().toISOString().split("T")[0]
-
-let contadorHoy=0
-
-citas.forEach(c=>{
-
-if(c.date===hoy){
-
-contadorHoy++
+themeToggle.innerText="☀️"
 
 }
 
-let tr = document.createElement("tr")
+themeToggle.addEventListener("click",()=>{
+
+document.body.classList.toggle("light")
+
+if(document.body.classList.contains("light")){
+
+localStorage.setItem("theme","light")
+
+themeToggle.innerText="☀️"
+
+}else{
+
+localStorage.setItem("theme","dark")
+
+themeToggle.innerText="🌙"
+
+}
+
+})
+
+/* LOGOUT */
+
+function logout(){
+
+localStorage.removeItem("token")
+
+window.location.href="login.html"
+
+}
+
+/* DEMO DATA */
+
+document.getElementById("clientesTotal").innerText=24
+
+document.getElementById("citasHoy").innerText=6
+
+const tabla=document.getElementById("tablaCitas")
+
+const citas=[
+
+{cliente:"Ana",servicio:"Masaje",fecha:"2026-03-07",hora:"10:00"},
+{cliente:"Luis",servicio:"Facial",fecha:"2026-03-07",hora:"11:30"},
+{cliente:"Maria",servicio:"Spa",fecha:"2026-03-07",hora:"14:00"}
+
+]
+
+citas.forEach(c=>{
+
+const tr=document.createElement("tr")
 
 tr.innerHTML=`
 
-<td>${c.client_name || "Cliente"}</td>
-<td>${c.service}</td>
-<td>${c.date}</td>
-<td>${c.time}</td>
+<td>${c.cliente}</td>
+<td>${c.servicio}</td>
+<td>${c.fecha}</td>
+<td>${c.hora}</td>
 
 `
 
 tabla.appendChild(tr)
 
 })
-
-citasHoy.innerText = contadorHoy
-
-}catch(error){
-
-console.log(error)
-
-}
-
-}
-
-cargarDashboard()
