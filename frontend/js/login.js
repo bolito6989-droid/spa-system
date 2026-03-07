@@ -1,36 +1,47 @@
-const API_URL = "http://localhost:4000/api/auth/login";
+const form = document.getElementById("loginForm")
 
-// Theme
-const savedTheme = localStorage.getItem("theme") || "light";
-document.documentElement.setAttribute("data-theme", savedTheme);
+form.addEventListener("submit", async (e)=>{
 
-document.addEventListener("DOMContentLoaded", () => {
-  const themeSwitch = document.getElementById("themeSwitch");
-  themeSwitch.checked = savedTheme === "dark";
+e.preventDefault()
 
-  themeSwitch.addEventListener("change", () => {
-    const t = themeSwitch.checked ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", t);
-    localStorage.setItem("theme", t);
-  });
+const username = document.getElementById("username").value
+const password = document.getElementById("password").value
 
-  const form = document.getElementById("loginForm");
-  form.addEventListener("submit", async e => {
-    e.preventDefault();
+try{
 
-    const email = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+const response = await fetch("http://localhost:4000/api/auth/login",{
 
-    const res = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password })
-    });
+method:"POST",
 
-    if (!res.ok) return alert("Credenciales incorrectas");
+headers:{
+"Content-Type":"application/json"
+},
 
-    const data = await res.json();
-    localStorage.setItem("token", data.token);
-    window.location.href = "dashboard.html";
-  });
-});
+body:JSON.stringify({
+username,
+password
+})
+
+})
+
+const data = await response.json()
+
+if(response.ok){
+
+localStorage.setItem("token",data.token)
+
+window.location.href="dashboard.html"
+
+}else{
+
+alert("Credenciales incorrectas")
+
+}
+
+}catch(err){
+
+alert("Error de conexión con el servidor")
+
+}
+
+})
