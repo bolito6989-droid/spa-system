@@ -5,26 +5,17 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
-/* FONDO */
+/* FONDO ORIGINAL BONITO */
 
 body{
 
 height:100vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#1cc7b7,#0f8f73);
-
-transition:0.3s;
-
-}
-
-/* MODO LIGHT */
-
-body.light{
-
-background:linear-gradient(135deg,#a8edea,#fed6e3);
+background:linear-gradient(135deg,#19c6b3,#0f7f68);
 
 }
 
@@ -34,7 +25,7 @@ background:linear-gradient(135deg,#a8edea,#fed6e3);
 
 width:360px;
 
-background:#1f3b4a;
+background:#243847;
 
 border-radius:18px;
 
@@ -48,13 +39,6 @@ box-shadow:0 30px 60px rgba(0,0,0,0.4);
 
 }
 
-body.light .login-container{
-
-background:white;
-color:#333;
-
-}
-
 /* TITULO */
 
 h1{
@@ -63,7 +47,7 @@ font-size:30px;
 
 margin-bottom:6px;
 
-color:#26ffe6;
+color:#1ce7c2;
 
 }
 
@@ -73,7 +57,7 @@ color:#26ffe6;
 
 margin-bottom:30px;
 
-opacity:0.85;
+opacity:0.8;
 
 }
 
@@ -101,13 +85,6 @@ outline:none;
 
 }
 
-body.light input{
-
-background:#f3f4f6;
-color:#111;
-
-}
-
 /* BOTON */
 
 button{
@@ -120,9 +97,9 @@ border:none;
 
 border-radius:10px;
 
-background:linear-gradient(135deg,#1ce7c2,#00b894);
+background:linear-gradient(135deg,#21e6c1,#12bfa3);
 
-color:#053b36;
+color:#073b36;
 
 font-size:15px;
 
@@ -134,9 +111,11 @@ transition:0.2s;
 
 }
 
+/* HOVER */
+
 button:hover{
 
-transform:scale(1.04);
+transform:scale(1.05);
 
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
@@ -168,7 +147,7 @@ color:#ff6b6b;
 
 footer{
 
-margin-top:22px;
+margin-top:20px;
 
 font-size:12px;
 
@@ -176,7 +155,7 @@ opacity:0.6;
 
 }
 
-/* BARRA SUPERIOR */
+/* FECHA Y BOTON TEMA */
 
 .top-bar{
 
