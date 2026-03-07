@@ -1,43 +1,21 @@
 const form = document.getElementById("loginForm")
 
-form.addEventListener("submit",async(e)=>{
+form.addEventListener("submit",(e)=>{
 
 e.preventDefault()
 
 const username=document.getElementById("username").value
 const password=document.getElementById("password").value
 
-try{
+if(username==="admin" && password==="admin"){
 
-const response=await fetch("http://localhost:4000/api/auth/login",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({username,password})
-
-})
-
-const data=await response.json()
-
-if(response.ok){
-
-localStorage.setItem("token",data.token)
+localStorage.setItem("token","demo")
 
 window.location.href="dashboard.html"
 
 }else{
 
 alert("Credenciales incorrectas")
-
-}
-
-}catch(err){
-
-alert("Servidor no disponible")
 
 }
 
