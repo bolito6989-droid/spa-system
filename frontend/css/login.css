@@ -5,7 +5,7 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
-/* FONDO PREMIUM */
+/* FONDO PRINCIPAL */
 
 body{
 
@@ -15,63 +15,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-
-transition:0.3s;
+background:linear-gradient(135deg,#1cc7b7,#0f8f73);
 
 }
 
-/* LIGHT MODE */
-
-body.light{
-
-background:linear-gradient(135deg,#a8edea,#fed6e3);
-
-}
-
-/* BARRA SUPERIOR */
-
-.top-bar{
-
-position:absolute;
-top:20px;
-right:30px;
-
-display:flex;
-gap:15px;
-align-items:center;
-
-color:white;
-font-weight:500;
-
-}
-
-/* BOTON TEMA */
-
-#themeToggle{
-
-border:none;
-padding:8px 14px;
-
-border-radius:10px;
-
-background:rgba(255,255,255,0.2);
-
-color:white;
-
-cursor:pointer;
-
-}
-
-/* CARD LOGIN */
+/* TARJETA LOGIN */
 
 .login-container{
 
 width:360px;
 
-background:rgba(0,0,0,0.35);
-
-backdrop-filter:blur(15px);
+background:#1f3b4a;
 
 border-radius:18px;
 
@@ -81,16 +35,7 @@ text-align:center;
 
 color:white;
 
-box-shadow:0 25px 60px rgba(0,0,0,0.4);
-
-}
-
-/* LIGHT MODE CARD */
-
-body.light .login-container{
-
-background:white;
-color:#333;
+box-shadow:0 30px 60px rgba(0,0,0,0.4);
 
 }
 
@@ -98,8 +43,11 @@ color:#333;
 
 h1{
 
-font-size:28px;
+font-size:30px;
+
 margin-bottom:6px;
+
+color:#26ffe6;
 
 }
 
@@ -108,7 +56,8 @@ margin-bottom:6px;
 .subtitle{
 
 margin-bottom:30px;
-opacity:0.8;
+
+opacity:0.85;
 
 }
 
@@ -126,7 +75,7 @@ border:none;
 
 border-radius:10px;
 
-background:#374151;
+background:#3b4c5e;
 
 color:white;
 
@@ -136,16 +85,7 @@ outline:none;
 
 }
 
-/* INPUT LIGHT */
-
-body.light input{
-
-background:#f3f4f6;
-color:#111;
-
-}
-
-/* BOTON LOGIN */
+/* BOTON */
 
 button{
 
@@ -157,9 +97,9 @@ border:none;
 
 border-radius:10px;
 
-background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+background:linear-gradient(135deg,#1ce7c2,#00b894);
 
-color:white;
+color:#053b36;
 
 font-size:15px;
 
@@ -171,11 +111,11 @@ transition:0.2s;
 
 }
 
-/* HOVER */
+/* HOVER BOTON */
 
 button:hover{
 
-transform:scale(1.05);
+transform:scale(1.04);
 
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
@@ -185,7 +125,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 .demo{
 
-margin-top:12px;
+margin-top:10px;
 
 font-size:13px;
 
@@ -212,5 +152,43 @@ margin-top:22px;
 font-size:12px;
 
 opacity:0.6;
+
+}
+
+/* FECHA Y TEMA */
+
+.top-bar{
+
+position:absolute;
+
+top:20px;
+
+right:30px;
+
+display:flex;
+
+gap:15px;
+
+align-items:center;
+
+color:white;
+
+font-weight:500;
+
+}
+
+#themeToggle{
+
+border:none;
+
+padding:8px 14px;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.25);
+
+color:white;
+
+cursor:pointer;
 
 }
