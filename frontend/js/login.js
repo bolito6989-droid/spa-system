@@ -1,4 +1,3 @@
-
 const form = document.getElementById("loginForm")
 
 const usernameInput = document.getElementById("username")
@@ -10,8 +9,7 @@ const datetime = document.getElementById("datetime")
 
 const themeToggle = document.getElementById("themeToggle")
 
-
-// reloj
+/* RELOJ */
 
 function updateTime(){
 
@@ -25,8 +23,7 @@ setInterval(updateTime,1000)
 
 updateTime()
 
-
-// tema
+/* TEMA */
 
 const savedTheme = localStorage.getItem("theme")
 
@@ -58,9 +55,7 @@ themeToggle.innerText="🌙"
 
 })
 
-
-
-// login
+/* LOGIN */
 
 form.addEventListener("submit", async (e)=>{
 
@@ -69,8 +64,7 @@ e.preventDefault()
 const username = usernameInput.value
 const password = passwordInput.value
 
-
-// login demo local
+/* LOGIN DEMO */
 
 if(username==="admin" && password==="admin"){
 
@@ -81,7 +75,6 @@ window.location.href="dashboard.html"
 return
 
 }
-
 
 try{
 
