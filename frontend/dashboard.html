@@ -4,114 +4,110 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Spa System Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/dashboard.css">
+<title>Spa System - Dashboard</title>
+
+<link rel="stylesheet" href="css/theme.css">
 
 </head>
 
 <body>
 
-<div class="layout">
+<div class="navbar">
 
-<!-- SIDEBAR -->
+<div class="logo">
 
-<aside class="sidebar">
+Spa System
 
-<h2>Spa System</h2>
+</div>
 
-<nav>
+<div class="menu">
 
-<a href="dashboard.html" class="active">Dashboard</a>
+<a href="dashboard.html">Dashboard</a>
 
 <a href="clients.html">Clientes</a>
 
-<a href="appointments.html">Agenda</a>
+<a href="appointments.html">Citas</a>
 
-<a href="#">Servicios</a>
-
-<a href="#">Terapeutas</a>
-
-<a href="#">Facturación</a>
-
-<a href="#">Reportes</a>
-
-<a href="login.html" class="logout">Cerrar sesión</a>
-
-</nav>
-
-</aside>
-
-
-<!-- MAIN -->
-
-<main class="main">
-
-<header class="topbar">
-
-<h1>Panel Administrativo</h1>
-
-<div class="user">
-
-Administrador
+<a href="login.html">Cerrar sesión</a>
 
 </div>
 
-</header>
+</div>
 
+<div class="container">
 
-<section class="cards">
+<h1>Dashboard</h1>
+
+<br>
+
+<div class="stats">
 
 <div class="card">
 
-<h3>Clientes</h3>
+<h3>Clientes registrados</h3>
 
-<p id="totalClients">0</p>
+<div class="number" id="clientesTotal">0</div>
 
 </div>
 
 <div class="card">
 
-<h3>Citas Hoy</h3>
+<h3>Citas hoy</h3>
 
-<p id="todayAppointments">0</p>
-
-</div>
-
-<div class="card">
-
-<h3>Ingresos Hoy</h3>
-
-<p>$0</p>
+<div class="number" id="citasHoy">0</div>
 
 </div>
 
 <div class="card">
 
-<h3>Servicios</h3>
+<h3>Servicios activos</h3>
 
-<p>4</p>
-
-</div>
-
-</section>
-
-
-<section class="activity">
-
-<h2>Actividad reciente</h2>
-
-<div class="activity-box">
-
-Sistema Spa funcionando correctamente
+<div class="number">6</div>
 
 </div>
 
-</section>
+<div class="card">
 
-</main>
+<h3>Ingresos del mes</h3>
+
+<div class="number">$2,150</div>
+
+</div>
+
+</div>
+
+<div class="table-container">
+
+<h2>Citas recientes</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Cliente</th>
+
+<th>Servicio</th>
+
+<th>Fecha</th>
+
+<th>Hora</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tablaCitas">
+
+</tbody>
+
+</table>
+
+</div>
 
 </div>
 
