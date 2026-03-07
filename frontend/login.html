@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spa System · Acceso</title>
+<title>Spa System</title>
 
 <link rel="stylesheet" href="css/login.css">
 
@@ -17,39 +18,35 @@
 
 <div class="background"></div>
 
-<main class="login-wrapper">
+<div class="login-container">
 
 <div class="login-card">
 
-<div class="brand">
-
 <h1>Spa System</h1>
 
-<p>Wellness & Management Platform</p>
-
-</div>
+<p class="subtitle">Wellness & Management Platform</p>
 
 <form id="loginForm">
 
-<div class="field">
+<div class="input-group">
+
+<input type="text" id="username" required>
 
 <label>Usuario</label>
 
-<input type="text" id="username" placeholder="admin">
-
 </div>
 
-<div class="field">
+<div class="input-group">
+
+<input type="password" id="password" required>
 
 <label>Contraseña</label>
-
-<input type="password" id="password" placeholder="••••••••">
 
 </div>
 
 <button type="submit">
 
-Ingresar
+Entrar al Sistema
 
 </button>
 
@@ -57,13 +54,13 @@ Ingresar
 
 <div class="footer">
 
-Desarrollado por <strong>Intelmatic®</strong>
+Intelmatic® · Sistema Profesional Spa
 
 </div>
 
 </div>
 
-</main>
+</div>
 
 <script src="js/login.js"></script>
 
