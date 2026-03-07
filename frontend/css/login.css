@@ -5,7 +5,7 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
-/* FONDO PRINCIPAL */
+/* FONDO PREMIUM */
 
 body{
 
@@ -15,17 +15,63 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#1cc7b7,#0f8f73);
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+transition:0.3s;
 
 }
 
-/* TARJETA LOGIN */
+/* LIGHT MODE */
+
+body.light{
+
+background:linear-gradient(135deg,#a8edea,#fed6e3);
+
+}
+
+/* BARRA SUPERIOR */
+
+.top-bar{
+
+position:absolute;
+top:20px;
+right:30px;
+
+display:flex;
+gap:15px;
+align-items:center;
+
+color:white;
+font-weight:500;
+
+}
+
+/* BOTON TEMA */
+
+#themeToggle{
+
+border:none;
+padding:8px 14px;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.2);
+
+color:white;
+
+cursor:pointer;
+
+}
+
+/* CARD LOGIN */
 
 .login-container{
 
 width:360px;
 
-background:#1f3b4a;
+background:rgba(0,0,0,0.35);
+
+backdrop-filter:blur(15px);
 
 border-radius:18px;
 
@@ -35,7 +81,16 @@ text-align:center;
 
 color:white;
 
-box-shadow:0 30px 60px rgba(0,0,0,0.4);
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
+
+}
+
+/* LIGHT MODE CARD */
+
+body.light .login-container{
+
+background:white;
+color:#333;
 
 }
 
@@ -43,11 +98,8 @@ box-shadow:0 30px 60px rgba(0,0,0,0.4);
 
 h1{
 
-font-size:30px;
-
+font-size:28px;
 margin-bottom:6px;
-
-color:#26ffe6;
 
 }
 
@@ -56,8 +108,7 @@ color:#26ffe6;
 .subtitle{
 
 margin-bottom:30px;
-
-opacity:0.85;
+opacity:0.8;
 
 }
 
@@ -75,7 +126,7 @@ border:none;
 
 border-radius:10px;
 
-background:#3b4c5e;
+background:#374151;
 
 color:white;
 
@@ -85,7 +136,16 @@ outline:none;
 
 }
 
-/* BOTON */
+/* INPUT LIGHT */
+
+body.light input{
+
+background:#f3f4f6;
+color:#111;
+
+}
+
+/* BOTON LOGIN */
 
 button{
 
@@ -97,9 +157,9 @@ border:none;
 
 border-radius:10px;
 
-background:linear-gradient(135deg,#1ce7c2,#00b894);
+background:linear-gradient(135deg,#00d2ff,#3a7bd5);
 
-color:#053b36;
+color:white;
 
 font-size:15px;
 
@@ -111,11 +171,11 @@ transition:0.2s;
 
 }
 
-/* HOVER BOTON */
+/* HOVER */
 
 button:hover{
 
-transform:scale(1.04);
+transform:scale(1.05);
 
 box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
@@ -125,7 +185,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 .demo{
 
-margin-top:10px;
+margin-top:12px;
 
 font-size:13px;
 
@@ -152,43 +212,5 @@ margin-top:22px;
 font-size:12px;
 
 opacity:0.6;
-
-}
-
-/* FECHA Y TEMA */
-
-.top-bar{
-
-position:absolute;
-
-top:20px;
-
-right:30px;
-
-display:flex;
-
-gap:15px;
-
-align-items:center;
-
-color:white;
-
-font-weight:500;
-
-}
-
-#themeToggle{
-
-border:none;
-
-padding:8px 14px;
-
-border-radius:10px;
-
-background:rgba(255,255,255,0.25);
-
-color:white;
-
-cursor:pointer;
 
 }
