@@ -5,6 +5,8 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
+/* FONDO PREMIUM */
+
 body{
 
 height:100vh;
@@ -13,26 +15,30 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#0f766e,#059669);
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 
 transition:0.3s;
 
 }
 
+/* LIGHT MODE */
+
 body.light{
 
-background:linear-gradient(135deg,#a5f3fc,#67e8f9);
+background:linear-gradient(135deg,#a8edea,#fed6e3);
 
 }
+
+/* BARRA SUPERIOR */
 
 .top-bar{
 
 position:absolute;
 top:20px;
-right:20px;
+right:30px;
 
 display:flex;
-gap:20px;
+gap:15px;
 align-items:center;
 
 color:white;
@@ -40,25 +46,34 @@ font-weight:500;
 
 }
 
+/* BOTON TEMA */
+
 #themeToggle{
 
 border:none;
-padding:8px 12px;
-border-radius:8px;
+padding:8px 14px;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.2);
+
+color:white;
 
 cursor:pointer;
 
 }
 
+/* CARD LOGIN */
+
 .login-container{
 
 width:360px;
 
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.35);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 
-border-radius:16px;
+border-radius:18px;
 
 padding:40px;
 
@@ -66,9 +81,11 @@ text-align:center;
 
 color:white;
 
-box-shadow:0 20px 50px rgba(0,0,0,0.3);
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
 
 }
+
+/* LIGHT MODE CARD */
 
 body.light .login-container{
 
@@ -77,12 +94,16 @@ color:#333;
 
 }
 
+/* TITULO */
+
 h1{
 
 font-size:28px;
-margin-bottom:5px;
+margin-bottom:6px;
 
 }
+
+/* SUBTITULO */
 
 .subtitle{
 
@@ -91,13 +112,15 @@ opacity:0.8;
 
 }
 
+/* INPUTS */
+
 input{
 
 width:100%;
 
 padding:14px;
 
-margin-bottom:15px;
+margin-bottom:16px;
 
 border:none;
 
@@ -109,7 +132,11 @@ color:white;
 
 font-size:14px;
 
+outline:none;
+
 }
+
+/* INPUT LIGHT */
 
 body.light input{
 
@@ -117,6 +144,8 @@ background:#f3f4f6;
 color:#111;
 
 }
+
+/* BOTON LOGIN */
 
 button{
 
@@ -128,7 +157,7 @@ border:none;
 
 border-radius:10px;
 
-background:linear-gradient(135deg,#22d3ee,#14b8a6);
+background:linear-gradient(135deg,#00d2ff,#3a7bd5);
 
 color:white;
 
@@ -142,15 +171,21 @@ transition:0.2s;
 
 }
 
+/* HOVER */
+
 button:hover{
 
-transform:scale(1.03);
+transform:scale(1.05);
+
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 }
 
+/* DEMO */
+
 .demo{
 
-margin-top:10px;
+margin-top:12px;
 
 font-size:13px;
 
@@ -158,17 +193,21 @@ opacity:0.7;
 
 }
 
+/* ERROR */
+
 .error{
 
 margin-top:10px;
 
-color:#f87171;
+color:#ff6b6b;
 
 }
 
+/* FOOTER */
+
 footer{
 
-margin-top:20px;
+margin-top:22px;
 
 font-size:12px;
 
