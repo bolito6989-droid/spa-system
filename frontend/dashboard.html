@@ -7,47 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spa System - Dashboard</title>
+<title>Spa System Dashboard</title>
 
 <link rel="stylesheet" href="css/theme.css">
 
 </head>
 
-<body>
+<body class="dashboard-body">
 
-<div class="navbar">
+<div class="dashboard-container">
 
-<div class="logo">
-
-Spa System
-
-</div>
-
-<div class="menu">
-
-<a href="dashboard.html">Dashboard</a>
-
-<a href="clients.html">Clientes</a>
-
-<a href="appointments.html">Citas</a>
-
-<a href="login.html">Cerrar sesión</a>
-
-</div>
-
-</div>
-
-<div class="container">
-
-<h1>Dashboard</h1>
-
-<br>
+<h1>Dashboard Spa System</h1>
 
 <div class="stats">
 
 <div class="card">
 
-<h3>Clientes registrados</h3>
+Clientes
 
 <div class="number" id="clientesTotal">0</div>
 
@@ -55,7 +31,7 @@ Spa System
 
 <div class="card">
 
-<h3>Citas hoy</h3>
+Citas hoy
 
 <div class="number" id="citasHoy">0</div>
 
@@ -63,7 +39,7 @@ Spa System
 
 <div class="card">
 
-<h3>Servicios activos</h3>
+Servicios
 
 <div class="number">6</div>
 
@@ -71,15 +47,13 @@ Spa System
 
 <div class="card">
 
-<h3>Ingresos del mes</h3>
+Ingresos
 
-<div class="number">$2,150</div>
-
-</div>
+<div class="number">$2150</div>
 
 </div>
 
-<div class="table-container">
+</div>
 
 <h2>Citas recientes</h2>
 
@@ -107,7 +81,7 @@ Spa System
 
 </table>
 
-</div>
+<button class="dashboard-btn" onclick="logout()">Cerrar sesión</button>
 
 </div>
 
