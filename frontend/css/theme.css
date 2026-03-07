@@ -5,83 +5,59 @@ box-sizing:border-box;
 font-family:Segoe UI, sans-serif;
 }
 
+/* FONDO PRINCIPAL */
+
 body{
 
-background:linear-gradient(135deg,#1cc7b7,#0f8f73);
-
-min-height:100vh;
-
-color:white;
-
-}
-
-/* NAVBAR */
-
-.navbar{
-
-background:#1f3b4a;
-
-padding:15px 30px;
+height:100vh;
 
 display:flex;
 
-justify-content:space-between;
+justify-content:center;
 
 align-items:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+background:linear-gradient(135deg,#1cc7b7,#0f8f73);
 
 }
 
-.logo{
+/* TARJETA PRINCIPAL */
 
-font-size:20px;
+.container{
 
-font-weight:600;
+width:900px;
+
+background:#1f3b4a;
+
+border-radius:18px;
+
+padding:40px;
+
+color:white;
+
+box-shadow:0 30px 60px rgba(0,0,0,0.4);
+
+}
+
+/* TITULO */
+
+h1{
+
+font-size:30px;
+
+margin-bottom:20px;
 
 color:#26ffe6;
 
 }
 
-.menu{
-
-display:flex;
-
-gap:20px;
-
-}
-
-.menu a{
-
-text-decoration:none;
-
-color:white;
-
-opacity:0.8;
-
-}
-
-.menu a:hover{
-
-opacity:1;
-
-}
-
-/* CONTENEDOR */
-
-.container{
-
-padding:30px;
-
-}
-
-/* TARJETAS */
+/* GRID DASHBOARD */
 
 .stats{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(4,1fr);
 
 gap:20px;
 
@@ -89,27 +65,23 @@ margin-bottom:30px;
 
 }
 
+/* TARJETAS */
+
 .card{
 
-background:#1f3b4a;
+background:#3b4c5e;
 
-padding:25px;
+padding:20px;
 
-border-radius:15px;
+border-radius:12px;
 
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
-
-}
-
-.card h3{
-
-font-size:14px;
-
-opacity:0.7;
+text-align:center;
 
 }
 
-.card .number{
+/* NUMERO GRANDE */
+
+.number{
 
 font-size:28px;
 
@@ -121,25 +93,13 @@ margin-top:5px;
 
 /* TABLA */
 
-.table-container{
-
-background:#1f3b4a;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
-
-}
-
 table{
 
 width:100%;
 
 border-collapse:collapse;
 
-margin-top:15px;
+margin-top:10px;
 
 }
 
@@ -157,21 +117,15 @@ color:#26ffe6;
 
 }
 
-tr{
-
-border-bottom:1px solid rgba(255,255,255,0.1);
-
-}
-
-/* BOTONES */
+/* BOTON */
 
 button{
 
-padding:10px 16px;
+padding:12px 18px;
 
 border:none;
 
-border-radius:8px;
+border-radius:10px;
 
 background:linear-gradient(135deg,#1ce7c2,#00b894);
 
@@ -185,6 +139,22 @@ cursor:pointer;
 
 button:hover{
 
-transform:scale(1.05);
+transform:scale(1.04);
+
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
+}
+
+/* FOOTER */
+
+.footer{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+opacity:0.6;
 
 }
