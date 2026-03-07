@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Clientes | Spa System</title>
+
+<link rel="stylesheet" href="css/clients.css">
+
+</head>
+
+<body>
+
+<h1>Clientes</h1>
+
+<div class="form-container">
+
+<input id="name" placeholder="Nombre completo">
+
+<input id="phone" placeholder="Teléfono">
+
+<input id="email" placeholder="Email">
+
+<button onclick="createClient()">Agregar Cliente</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Nombre</th>
+
+<th>Teléfono</th>
+
+<th>Email</th>
+
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody id="clientsTable"></tbody>
+
+</table>
+
+<script src="js/clients.js"></script>
+
+</body>
+
+</html>

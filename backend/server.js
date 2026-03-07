@@ -1,30 +1,57 @@
-require("dotenv").config();
+require("dotenv").config()
 
-const express = require("express");
-const cors = require("cors");
+const express = require("express")
+const cors = require("cors")
 
-const authRoutes = require("./routes/auth.routes");
-const appointmentsRoutes = require("./routes/appointments.routes");
+const authRoutes = require("./routes/auth.routes")
+const appointmentsRoutes = require("./routes/appointments.routes")
+const clientsRoutes = require("./routes/clients.routes")
 
-const app = express();
+const app = express()
 
-app.use(cors());
-app.use(express.json());
+app.use(cors())
+app.use(express.json())
 
-app.use("/api/auth", authRoutes);
-app.use("/api/appointments", appointmentsRoutes);
+/* ===============================
+   ROUTES
+================================ */
 
-app.get("/", (_, res) => {
-  res.json({
-    service: "Spa System API",
-    database: "PostgreSQL",
-    developer: "Intelmatic®",
-    status: "OK"
-  });
-});
+app.use("/api/auth", authRoutes)
 
-const PORT = process.env.PORT || 4000;
+app.use("/api/appointments", appointmentsRoutes)
+
+app.use("/api/clients", clientsRoutes)
+
+/* ===============================
+   HEALTH CHECK
+================================ */
+
+app.get("/", (req, res) => {
+
+res.json({
+
+service: "Spa System API",
+
+version: "1.0",
+
+database: "PostgreSQL",
+
+developer: "Intelmatic®",
+
+status: "running"
+
+})
+
+})
+
+/* ===============================
+   SERVER START
+================================ */
+
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT, () => {
-  console.log(`🚀 Spa Backend running on port ${PORT}`);
-});
+
+console.log(`🚀 Spa API running on port ${PORT}`)
+
+})
