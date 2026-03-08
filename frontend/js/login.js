@@ -9,10 +9,6 @@ const datetime = document.getElementById("datetime")
 
 const themeToggle = document.getElementById("themeToggle")
 
-const loader = document.getElementById("loader")
-
-const loginButton = document.getElementById("loginButton")
-
 /* RELOJ */
 
 function updateTime(){
@@ -59,7 +55,7 @@ themeToggle.innerText="🌙"
 
 })
 
-/* LOGIN */
+/* LOGIN DEMO */
 
 form.addEventListener("submit",(e)=>{
 
@@ -70,26 +66,16 @@ const password = passwordInput.value
 
 error.innerText=""
 
-loader.style.display="block"
-
-loginButton.style.display="none"
-
-setTimeout(()=>{
-
 if(username==="admin" && password==="admin"){
+
+localStorage.setItem("token","demo")
 
 window.location.href="dashboard.html"
 
 }else{
 
-loader.style.display="none"
-
-loginButton.style.display="block"
-
 error.innerText="Credenciales incorrectas"
 
 }
-
-},1200)
 
 })
