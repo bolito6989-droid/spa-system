@@ -9,6 +9,10 @@ const datetime = document.getElementById("datetime")
 
 const themeToggle = document.getElementById("themeToggle")
 
+const loader = document.getElementById("loader")
+
+const loginButton = document.getElementById("loginButton")
+
 /* RELOJ */
 
 function updateTime(){
@@ -57,62 +61,35 @@ themeToggle.innerText="🌙"
 
 /* LOGIN */
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener("submit",(e)=>{
 
 e.preventDefault()
 
 const username = usernameInput.value
 const password = passwordInput.value
 
-/* LOGIN DEMO */
+error.innerText=""
+
+loader.style.display="block"
+
+loginButton.style.display="none"
+
+setTimeout(()=>{
 
 if(username==="admin" && password==="admin"){
-
-localStorage.setItem("token","demo-token")
-
-window.location.href="dashboard.html"
-
-return
-
-}
-
-try{
-
-const res = await fetch("http://localhost:4000/api/auth/login",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-
-username,
-password
-
-})
-
-})
-
-const data = await res.json()
-
-if(res.ok){
-
-localStorage.setItem("token",data.token)
 
 window.location.href="dashboard.html"
 
 }else{
 
+loader.style.display="none"
+
+loginButton.style.display="block"
+
 error.innerText="Credenciales incorrectas"
 
 }
 
-}catch(err){
-
-error.innerText="Error de conexión con servidor"
-
-}
+},1200)
 
 })

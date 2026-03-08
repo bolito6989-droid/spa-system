@@ -262,3 +262,59 @@ font-size:12px;
 opacity:0.6;
 
 }
+/* INPUT ICONS */
+
+.input-group{
+
+position:relative;
+
+}
+
+.icon{
+
+position:absolute;
+
+left:12px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+opacity:0.7;
+
+}
+
+.input-group input{
+
+padding-left:40px;
+
+}
+
+/* LOADER */
+
+.loader{
+
+width:30px;
+
+height:30px;
+
+border:3px solid rgba(255,255,255,0.3);
+
+border-top:3px solid #22d3ee;
+
+border-radius:50%;
+
+margin:15px auto;
+
+display:none;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+
+}
