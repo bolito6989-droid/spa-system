@@ -1,93 +1,105 @@
-const API="http://localhost:4000/api/clients"
+const tabla=document.getElementById("tablaClientes")
 
-async function loadClients(){
+let clientes=[]
 
-const res=await fetch(API)
+function agregarCliente(){
 
-const clients=await res.json()
+const nombre=document.getElementById("nombre").value
+const telefono=document.getElementById("telefono").value
+const email=document.getElementById("email").value
 
-const table=document.getElementById("clientsTable")
+if(nombre==="") return
 
-table.innerHTML=""
+clientes.push({nombre,telefono,email})
 
-clients.forEach(client=>{
+mostrarClientes()
 
-const row=`
+}
 
-<tr>
+function mostrarClientes(){
 
-<td>${client.id}</td>
+tabla.innerHTML=""
 
-<td>${client.full_name}</td>
+clientes.forEach((c,index)=>{
 
-<td>${client.phone || ""}</td>
+const tr=document.createElement("tr")
 
-<td>${client.email || ""}</td>
+tr.innerHTML=`
+
+<td>${c.nombre}</td>
+<td>${c.telefono}</td>
+<td>${c.email}</td>
 
 <td>
-
-<button class="delete" onclick="deleteClient(${client.id})">Eliminar</button>
-
+<button onclick="eliminarCliente(${index})">Eliminar</button>
 </td>
-
-</tr>
 
 `
 
-table.innerHTML+=row
+tabla.appendChild(tr)
 
 })
 
 }
 
-async function createClient(){
+function eliminarCliente(index){
 
-const name=document.getElementById("name").value
+clientes.splice(index,1)
 
-const phone=document.getElementById("phone").value
-
-const email=document.getElementById("email").value
-
-await fetch(API,{
-
-method:"POST",
-
-headers:{
-
-"Content-Type":"application/json"
-
-},
-
-body:JSON.stringify({
-
-full_name:name,
-
-phone:phone,
-
-email:email
-
-})
-
-})
-
-document.getElementById("name").value=""
-document.getElementById("phone").value=""
-document.getElementById("email").value=""
-
-loadClients()
+mostrarClientes()
 
 }
 
-async function deleteClient(id){
+function buscarCliente(){
 
-await fetch(API+"/"+id,{
+const filtro=document.getElementById("buscar").value.toLowerCase()
 
-method:"DELETE"
+const filas=tabla.getElementsByTagName("tr")
 
-})
+for(let fila of filas){
 
-loadClients()
+const nombre=fila.cells[0].textContent.toLowerCase()
+
+fila.style.display=nombre.includes(filtro)?"":"none"
 
 }
 
-loadClients()
+}
+
+/* TEMA */
+
+const themeToggle=document.getElementById("themeToggle")
+
+const savedTheme=localStorage.getItem("theme")
+
+if(savedTheme==="light"){
+
+document.body.classList.add("light")
+
+themeToggle.innerText="☀️"
+
+}
+
+themeToggle.addEventListener("click",()=>{
+
+document.body.classList.toggle("light")
+
+if(document.body.classList.contains("light")){
+
+localStorage.setItem("theme","light")
+themeToggle.innerText="☀️"
+
+}else{
+
+localStorage.setItem("theme","dark")
+themeToggle.innerText="🌙"
+
+}
+
+})
+
+function logout(){
+
+window.location.href="login.html"
+
+}
