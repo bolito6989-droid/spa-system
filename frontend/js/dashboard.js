@@ -17,13 +17,11 @@ document.body.classList.toggle("light")
 if(document.body.classList.contains("light")){
 
 localStorage.setItem("theme","light")
-
 themeToggle.innerText="☀️"
 
 }else{
 
 localStorage.setItem("theme","dark")
-
 themeToggle.innerText="🌙"
 
 }
@@ -66,14 +64,41 @@ fill:true
 
 }]
 
+}
+
+})
+
+/* CALENDARIO */
+
+document.addEventListener("DOMContentLoaded",function(){
+
+const calendarEl=document.getElementById("calendar")
+
+const calendar=new FullCalendar.Calendar(calendarEl,{
+
+initialView:"dayGridMonth",
+
+events:[
+
+{
+title:"Masaje Ana",
+date:"2026-03-07"
 },
 
-options:{
+{
+title:"Facial Luis",
+date:"2026-03-08"
+},
 
-plugins:{
-legend:{display:false}
+{
+title:"Spa Maria",
+date:"2026-03-09"
 }
 
-}
+]
+
+})
+
+calendar.render()
 
 })

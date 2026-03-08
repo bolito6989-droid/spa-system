@@ -221,3 +221,21 @@ body.light canvas{
 background:white;
 
 }
+
+#calendar{
+
+margin-top:20px;
+
+background:#1e293b;
+
+padding:20px;
+
+border-radius:12px;
+
+}
+
+body.light #calendar{
+
+background:white;
+
+}
