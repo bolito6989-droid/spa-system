@@ -17,11 +17,13 @@ document.body.classList.toggle("light")
 if(document.body.classList.contains("light")){
 
 localStorage.setItem("theme","light")
+
 themeToggle.innerText="☀️"
 
 }else{
 
 localStorage.setItem("theme","dark")
+
 themeToggle.innerText="🌙"
 
 }
@@ -50,7 +52,7 @@ labels:["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"],
 
 datasets:[{
 
-label:"Ingresos $",
+label:"Ingresos",
 
 data:[150,220,180,300,250,400,350],
 
@@ -70,14 +72,6 @@ options:{
 
 plugins:{
 legend:{display:false}
-},
-
-scales:{
-
-y:{
-beginAtZero:true
-}
-
 }
 
 }

@@ -16,93 +16,80 @@
 
 <body>
 
-<div class="top-bar">
+<div class="app">
 
-<h2>Spa System</h2>
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2 class="logo">Spa System</h2>
+
+<ul class="menu">
+
+<li class="active">📊 Dashboard</li>
+<li>👥 Clientes</li>
+<li>📅 Citas</li>
+<li>💰 Facturación</li>
+<li>📈 Reportes</li>
+<li>⚙️ Configuración</li>
+
+</ul>
+
+<button onclick="logout()" class="logout">
+
+Cerrar sesión
+
+</button>
+
+</div>
+
+
+<!-- CONTENT -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Dashboard</h1>
 
 <button id="themeToggle">🌙</button>
 
 </div>
 
-<div class="dashboard-container">
-
-<h1>Dashboard</h1>
+<!-- STATS -->
 
 <div class="stats">
 
 <div class="card">
-<div class="card-title">Clientes</div>
-<div class="card-number">24</div>
+<div class="title">Clientes</div>
+<div class="number">24</div>
 </div>
 
 <div class="card">
-<div class="card-title">Citas Hoy</div>
-<div class="card-number">6</div>
+<div class="title">Citas Hoy</div>
+<div class="number">6</div>
 </div>
 
 <div class="card">
-<div class="card-title">Servicios</div>
-<div class="card-number">5</div>
+<div class="title">Servicios</div>
+<div class="number">5</div>
 </div>
 
 <div class="card">
-<div class="card-title">Ingresos</div>
-<div class="card-number">$2150</div>
+<div class="title">Ingresos</div>
+<div class="number">$2150</div>
 </div>
 
 </div>
+
+
+<!-- CHART -->
 
 <h2>Ingresos de la semana</h2>
 
 <canvas id="revenueChart"></canvas>
 
-<br><br>
-
-<h2>Últimas citas</h2>
-
-<table>
-
-<thead>
-
-<tr>
-<th>Cliente</th>
-<th>Servicio</th>
-<th>Fecha</th>
-<th>Hora</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>Ana</td>
-<td>Masaje</td>
-<td>2026-03-07</td>
-<td>10:00</td>
-</tr>
-
-<tr>
-<td>Luis</td>
-<td>Facial</td>
-<td>2026-03-07</td>
-<td>11:30</td>
-</tr>
-
-<tr>
-<td>Maria</td>
-<td>Spa</td>
-<td>2026-03-07</td>
-<td>14:00</td>
-</tr>
-
-</tbody>
-
-</table>
-
-<br>
-
-<button onclick="logout()">Cerrar sesión</button>
+</div>
 
 </div>
 
