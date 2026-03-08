@@ -1,7 +1,5 @@
 const themeToggle=document.getElementById("themeToggle")
 
-/* TEMA */
-
 const savedTheme=localStorage.getItem("theme")
 
 if(savedTheme==="light"){
@@ -19,20 +17,16 @@ document.body.classList.toggle("light")
 if(document.body.classList.contains("light")){
 
 localStorage.setItem("theme","light")
-
 themeToggle.innerText="☀️"
 
 }else{
 
 localStorage.setItem("theme","dark")
-
 themeToggle.innerText="🌙"
 
 }
 
 })
-
-/* LOGOUT */
 
 function logout(){
 
@@ -42,35 +36,50 @@ window.location.href="login.html"
 
 }
 
-/* DEMO DATA */
+/* CHART */
 
-document.getElementById("clientesTotal").innerText=24
+const ctx=document.getElementById("revenueChart")
 
-document.getElementById("citasHoy").innerText=6
+new Chart(ctx,{
 
-const tabla=document.getElementById("tablaCitas")
+type:"line",
 
-const citas=[
+data:{
 
-{cliente:"Ana",servicio:"Masaje",fecha:"2026-03-07",hora:"10:00"},
-{cliente:"Luis",servicio:"Facial",fecha:"2026-03-07",hora:"11:30"},
-{cliente:"Maria",servicio:"Spa",fecha:"2026-03-07",hora:"14:00"}
+labels:["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"],
 
-]
+datasets:[{
 
-citas.forEach(c=>{
+label:"Ingresos $",
 
-const tr=document.createElement("tr")
+data:[150,220,180,300,250,400,350],
 
-tr.innerHTML=`
+borderColor:"#06b6d4",
 
-<td>${c.cliente}</td>
-<td>${c.servicio}</td>
-<td>${c.fecha}</td>
-<td>${c.hora}</td>
+backgroundColor:"rgba(6,182,212,0.2)",
 
-`
+tension:0.4,
 
-tabla.appendChild(tr)
+fill:true
+
+}]
+
+},
+
+options:{
+
+plugins:{
+legend:{display:false}
+},
+
+scales:{
+
+y:{
+beginAtZero:true
+}
+
+}
+
+}
 
 })
